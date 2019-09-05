@@ -23,9 +23,9 @@
          </div>
          <div class="wait"></div>
     </div>
+    
 </template>
 
-<script href="../../../node_modules/jquery/dist/jquery.min.js"></script>
 <script>
 export default {
     data() {

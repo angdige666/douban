@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const session = require("express-session");
-
+const jwt = require('jsonwebtoken');
 
 var uE = bodyParser.urlencoded({extended:false});
 
@@ -35,7 +35,8 @@ var dbCollection = mongoose.model("users",{
 app.post('/login',uE,(req,res)=>{
     var uemail = req.body.email;
     var upwd = req.body.password;
-   
+   console.log(uemail)
+   console.log(upwd)
     var md5Pwd = crypto.createHash('md5').update(upwd).digest('hex');
 
     mongoose.connect('mongodb://localhost:27017/douban',{useNewUrlParser:true},function(err) {
@@ -44,9 +45,17 @@ app.post('/login',uE,(req,res)=>{
         }else {
             dbCollection.find({userpwd:md5Pwd,useremail:uemail}).then((ok)=>{
                 if(ok.length>0) {
-                    req.session.loginok=true;
-                    res.session.uname=uemail;
-                    res.send({mes:'登录成功',status:200,linkId:3,session:req.session})
+                    // req.session.loginok=true;
+                    // res.session.unames=uemail;
+
+                    //token验证
+                    var data= {
+                        loginok:true,
+                        username:uemail
+                    }
+                    var mi='asdfgkdmdlldlld';
+                    var token = jwt.sign(data,mi);
+                    res.send({mes:'登录成功',status:200,linkId:3,token})
                 }else {            
                     res.send({meg:"登录失败",status:'500',linkId:4})
                 }    
@@ -88,13 +97,22 @@ app.post('/reg',uE,(req,res)=>{
     })
 })
 
-app.get("/movie",function(req,res){
-    console.log(req.session)
-    if(req.session.loginok==true){
-        res.send({mes:"用户登陆过",status:200,linkid:5,username:req.session.uname})
-    }else{
-        res.send({mes:"用户没有登陆过",status:200,linkid:6})
-    }
+app.post("/panduan",uE,function(req,res){
+    console.log(req.body.dataToken)
+    var token  = req.body.dataToken;
+    var mi='asdfgkdmdlldlld';
+    jwt.verify(token,mi,(err,ok)=>{
+        if(ok.loginok == true) {
+            res.send({mes:"用户登陆过",status:200,linkid:5,username:ok.username})
+        }else {
+            res.send({mes:"用户没有登陆过",status:200,linkid:6})
+        }
+    })
+    // if(req.body.session.loginok==true){
+    //     res.send({mes:"用户登陆过",status:200,linkid:5,username:req.body.session.uname})
+    // }else{
+    //     res.send({mes:"用户没有登陆过",status:200,linkid:6})
+    // }
 })
 
 

@@ -1,0 +1,14 @@
+[
+    {"title":"电影","url":"http://localhost:8080/#/index","news":"影院热映","color":"#2384E8"},
+    {"title":"电视","url":"http://localhost:8080/#/index","news":"正在热播","color":"#7A6ADB"},
+    {"title":"图书","url":"http://localhost:8080/#/index","news":"畅销排行","color":"#9F7860"},
+    {"title":"同城","url":"http://localhost:8080/#/index","news":"周末活动","color":"#E6467E"},
+    {"title":"小组","url":"http://localhost:8080/#/index","news":"志趣相投","color":"#2AB8CC"},
+    {"title":"音乐","url":"http://localhost:8080/#/index","news":"新碟榜","color":"#F48F2E"},
+    {"title":"阅读","url":"http://localhost:8080/#/index","news":"电子书","color":"#9F7860"},
+    {"title":"游戏","url":"http://localhost:8080/#/index","news":"虚拟世界","color":"#5774C5"},
+    {"title":"应用","url":"http://localhost:8080/#/index","news":"玩手机","color":"#596CDD"},
+    {"title":"东西","url":"http://localhost:8080/#/index","news":"心爱之物","color":"#E1644D"},
+    {"title":"FM","url":"http://localhost:8080/#/index","news":"红心歌单","color":"#40cfa9"},
+    {"title":"市集","url":"http://localhost:8080/#/index","news":"购买原创","color":"#42BD56"}
+]

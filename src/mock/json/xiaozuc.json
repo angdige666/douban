@@ -1,0 +1,41 @@
+[
+    {
+      "title": "我爱代购&amp;海淘☺微信号",
+      "subtype": "group",
+      "id": 1234,
+      "images": {
+        "small": "https://img5.doubanio.com/icon/g37539-6.jpg"
+      },
+      "group_member": "431999",
+      "group_topic": {
+        "title": "靠谱小日代 薇信直播定位+邮寄单号 可拼邮可直邮 保证品 ～笔芯",
+        "time": "4分钟前更新："
+      }
+    },
+    {
+      "title": "PiaPia团✿团购",
+      "subtype": "group",
+      "id": 1234,
+      "images": {
+        "small": "https://img3.doubanio.com/icon/g573696-2.jpg"
+      },
+      "group_member": "96960",
+      "group_topic": {
+        "title": "【想买】之前团过的包要吗？",
+        "time": "1小时前更新："
+      }
+    },
+    {
+      "title": "我们一起海淘",
+      "subtype": "group",
+      "id": 1234,
+      "images": {
+        "small": "https://img3.doubanio.com/icon/g25704-22.jpg"
+      },
+      "group_member": "743736",
+      "group_topic": {
+        "title": "靠谱小日代 薇信直播定位+邮寄单号 可拼邮可直邮 保正品～笔芯",
+        "time": "'3分钟前更新："
+      }
+    }
+  ]

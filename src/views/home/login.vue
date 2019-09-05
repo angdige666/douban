@@ -54,6 +54,9 @@ export default {
                 data:param,
                 url:"http://localhost:8888/login"
             }).then((ok)=>{
+                console.log(ok);
+                localStorage.setItem("token",ok.data.token);
+                
                 if(ok.data.linkId==3) {
                     var num = 6;
                     var temp = setInterval(function() {

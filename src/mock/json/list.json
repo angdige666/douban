@@ -1,0 +1,20 @@
+[
+    {"title":"经典","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"冷门佳片","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"豆瓣高分","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"动作","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"喜剧","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"爱情","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"悬疑","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"恐怖","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"科幻","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"治愈","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"文艺","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"成长","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"动画","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"华语","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"欧美","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"韩国","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"},
+    {"title":"日本","href":"https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0","color":"#42BD56"}
+
+]

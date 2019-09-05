@@ -17,19 +17,7 @@
                 
             </div>
         </div>
-
-        <!-- <div id="nav">
-            <div>
-                <router-link to="/movie">影院热映</router-link>
-                <router-link to="/books">欧美新碟榜</router-link>
-            </div>
-            <div>
-                <router-link to="/movie">注册帐号</router-link>
-                <router-link to="/books">登录豆瓣</router-link>
-            </div>
-        </div> -->
     </div>
-    
 </template>
 
 <script>
@@ -91,35 +79,4 @@ export default {
         margin-right: 5px;
         vertical-align: middle;
     }
-
-    /* #nav {
-       padding-top:.2rem;
-       width:100%; 
-    }
-    #nav>div {
-        margin-bottom:.1rem;
-    }
-    #nav div {
-        width:100%;
-        height:.4rem;
-        text-align: center;
-    }
-
-    #nav div a {
-        float: left;
-        width:1.7rem;
-        height:.4rem;
-        line-height: .4rem;
-        font-size: .12rem;
-        color:#494949;     
-        border-radius: 5px;
-        text-decoration: none;
-        background:#F6F6F6;
-    }
-    #nav div a:nth-of-type(1) {
-        margin-left:3%;
-    }
-    #nav div a:nth-of-type(2) {
-        margin-left:.1rem;
-    } */
 </style>

@@ -9,11 +9,31 @@ import Group from '../views/home/group'
 import Inquire from '../views/home/inquire'
 import Reg from '../views/home/reg'
 import Login from '../views/home/login'
+// import Search from '../views/home/search'
+
+import XiangQing from '../views/home/xiangqing'
+
+import MoveXq from '../views/home/moviexq'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/search',
+    //   name: 'search',
+    //   component: Search
+    // },
+    {
+      path: '/moviexq',
+      name: 'moviexq',
+      component: MoveXq
+    },
+    {
+      path: '/xiangqing',
+      name: 'xiangqing',
+      component: XiangQing
+    },
     {
       path: '/index',
       name: 'index',
