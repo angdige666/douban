@@ -9,7 +9,9 @@
             <div class="box">
                 <div class="left">
                     <h1>{{data[0].title}}</h1>
-                    <p>星星<span>{{data[0].rating.average}}</span><span>{{data[0].collect_count}}人评价</span></p>
+                    <!-- <p></p><span>{{data[0].rating.average}}</span> -->
+                    <start :num="data[0].rating.average/2"></start>
+                    <span>{{data[0].collect_count}}人评价</span></p>
                     <p>{{data[0].catalog}}</p>
                     <span class="chakan">用APP查看影人资料</span>
                 </div>
@@ -55,12 +57,14 @@
 import routerLinkNav from '../../components/content/routerLinkNav'
 import adTop from '../../components/content/adTop'
 import bottomLink from '../../components/content/bottomLink'
+import start from '../../components/content/start'
 
 export default {
     components:{
         routerLinkNav,
         adTop,
-        bottomLink
+        bottomLink,
+        start
     },
     data() {
         return{

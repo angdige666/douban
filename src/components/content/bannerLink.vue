@@ -6,16 +6,7 @@
                     <img :src="v.images.large" alt="">
                     <h3>{{v.title}}</h3>
                     <div class="bott">
-                        <span>
-                            <el-rate
-                                v-model="value"
-                                disabled
-                                show-score
-                                text-color="#ff9900"
-                                score-template="{value}">
-                            </el-rate>
-                        </span>
-                        <!-- <span>{{v.rating.average}}</span> -->
+                        <start :num="v.rating.average/2"></start>
                     </div>
                 </div>    
             </div>
@@ -25,19 +16,18 @@
 </template>
 
 <script>
+import start from './start'
 export default {
+    components:{
+        start
+    },
     props:{
         obj:{
             type:Array,
             required:true
         }
     },
-    data() {
-        return{
-            value: 3.7,
-            num:7.9
-        }
-    },
+    
     methods: {
         funlink(i) {
             console.log(i);

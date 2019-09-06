@@ -1,16 +1,8 @@
 <template>
     <div>
         <router-link-nav></router-link-nav>
-        <div class="loginbox">
-            <div class="left" @click="fun1()">
-                <img src="../../../static/images/common/grlogin.jpg" alt="">
-                <span>请先登录</span>
-            </div>
-            <div class="right">
-                <img src="../../../static/images/common/001.svg" alt="">
-                <img src="../../../static/images/common/came.svg" alt="">
-            </div>
-        </div>
+        <p v-if="token"></p>
+        <login-link v-else></login-link>
         <top-tittle-link :topleft='topleft1' :topright='topright1'></top-tittle-link>
         <div>
             <xiao-zu-link :obj="data" :text="text1"></xiao-zu-link>
@@ -33,12 +25,15 @@ import xiaoZuLink from '../../components/content/xiaoZuLink'
 
 import bottomLink from '../../components/content/bottomLink'
 
+import loginLink from '../../components/content/loginlink'
+
 export default {
     components:{
         routerLinkNav,
         topTittleLink,
         xiaoZuLink,
-        bottomLink
+        bottomLink,
+        loginLink
     },
     data() {
         return {
@@ -49,7 +44,8 @@ export default {
             data2:[],
             text1:"更多相关小组",
             text2:"来聊五块钱",
-            text3:"更多相关小组"
+            text3:"更多相关小组",
+            token:""
         }
     },
     methods: {
@@ -58,6 +54,8 @@ export default {
         }
     },
     created() {
+        this.token = localStorage.getItem('token')
+
         this.axios({
             method:"get",
             url:"/xiaozua"
@@ -84,34 +82,5 @@ export default {
 </script>
 
 <style scoped>
-    .loginbox {
-        width:90%;
-        height:.5rem;
-        margin:auto;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        border-bottom: 1px solid #ccc;
-    }
-    .loginbox div {
-        width:30%;
-        height:100%;
-    }
-    .loginbox .left img {
-        width: 30%;
-        margin-top: .04rem;
-        margin-right:.05rem;
-        border-radius: 50%;
-    }
-    .loginbox .right img {
-        width: 25%;
-        margin-top: .04rem;
-        margin-right:.05rem;
-        margin-left: .1rem;
-        margin-top:.1rem
-    }
-    .loginbox .left span {
-        line-height: .5rem;
-        color:#AAAAAA;
-    }
+    
 </style>
