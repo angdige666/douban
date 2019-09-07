@@ -30,8 +30,8 @@
 export default {
     data() {
         return{
-            eyeImg1:"../../../static/images/common/eye1.png",
-            eyeImg2:"../../../static/images/common/eye2.png",
+            eyeImg1:"static/images/common/eye1.png",
+            eyeImg2:"static/images/common/eye2.png",
             temp:true,
             email:"",
             password:""
@@ -44,35 +44,38 @@ export default {
         eyeFun() {
             this.temp = !this.temp
         },
-        login() {
-            var param = new URLSearchParams();
-            param.append("email",this.email)
-            param.append("password",this.password)
+        // login() {
+        //     var param = new URLSearchParams();
+        //     param.append("email",this.email)
+        //     param.append("password",this.password)
 
-            this.axios({
-                method:'post',
-                data:param,
-                url:"http://localhost:8888/login"
-            }).then((ok)=>{
-                console.log(ok);
-                localStorage.setItem("token",ok.data.token);
+        //     this.axios({
+        //         method:'post',
+        //         data:param,
+        //         url:"http://localhost:8888/login"
+        //     }).then((ok)=>{
+        //         console.log(ok);
+        //         localStorage.setItem("token",ok.data.token);
                 
-                if(ok.data.linkId==3) {
-                    var num = 6;
-                    var temp = setInterval(function() {
-                        num--
-                        if(num==0) {
-                            clearInterval(temp)
-                            window.location.href="http://localhost:8080/#/index"
-                        }
-                        $('.wait').html("<p>登录成功" + num + "秒后自动跳转</p>")
-                    },1000)
-                }else {
-                    $('.wait').html("<p style='color:red';>亲，用户名或密码错误</p>")
-                }
-            },(err)=>{
-                $('.wait').html("<p style='color:red';>亲,登录失败，请稍后再试</p>")
-            })
+        //         if(ok.data.linkId==3) {
+        //             var num = 6;
+        //             var temp = setInterval(function() {
+        //                 num--
+        //                 if(num==0) {
+        //                     clearInterval(temp)
+        //                     window.location.href="http://localhost:8080/#/index"
+        //                 }
+        //                 $('.wait').html("<p>登录成功" + num + "秒后自动跳转</p>")
+        //             },1000)
+        //         }else {
+        //             $('.wait').html("<p style='color:red';>亲，用户名或密码错误</p>")
+        //         }
+        //     },(err)=>{
+        //         $('.wait').html("<p style='color:red';>亲,登录失败，请稍后再试</p>")
+        //     })
+        // },
+        login() {
+            window.location.href="http://localhost:8080/#/index"
         },
         regfun() {
             window.location.href = "http://localhost:8080/#/reg"

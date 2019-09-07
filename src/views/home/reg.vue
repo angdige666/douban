@@ -30,8 +30,8 @@
 export default {
     data() {
         return{
-            eyeImg1:"../../../static/images/common/eye1.png",
-            eyeImg2:"../../../static/images/common/eye2.png",
+            eyeImg1:"static/images/common/eye1.png",
+            eyeImg2:"static/images/common/eye2.png",
             temp:true,
             email:"",
             password:"",
@@ -45,36 +45,40 @@ export default {
         eyeFun() {
             this.temp = !this.temp
         },
-        login() {
+        // login() {
             
-            $.ajax({
-                url:"http://localhost:8888/reg",
-                type:"post",
-                data:{
-                    "email":this.email,
-                    "password":this.password,
-                    "username":this.username 
-                },
-                success(data) {
-                    console.log(data);
-                    if(data.linkId==1) {
-                        var num = 6;
-                        var temp = setInterval(function() {
-                            num--
-                            if(num==0) {
-                                clearInterval(temp)
-                                window.location.href="http://localhost:8080/?#/login"
-                            }
-                            $('.wait').html("<p>注册成功" + num + "秒后自动跳转</p>")
-                        },1000)
-                    }else if(data.linkId==2) {
-                        $('.wait').html("<p style='color:red';>亲，用户名已存在</p>")
-                    }
-                },
-                beforeSend() {
-                    $('.wait').html("<img src='../../../static/images/common/loading_green.gif'>")
-                }
-            })
+        //     $.ajax({
+        //         url:"http://localhost:8888/reg",
+        //         type:"post",
+        //         data:{
+        //             "email":this.email,
+        //             "password":this.password,
+        //             "username":this.username 
+        //         },
+        //         success(data) {
+        //             console.log(data);
+        //             if(data.linkId==1) {
+        //                 var num = 6;
+        //                 var temp = setInterval(function() {
+        //                     num--
+        //                     if(num==0) {
+        //                         clearInterval(temp)
+        //                         window.location.href="http://localhost:8080/?#/login"
+        //                     }
+        //                     $('.wait').html("<p>注册成功" + num + "秒后自动跳转</p>")
+        //                 },1000)
+        //             }else if(data.linkId==2) {
+        //                 $('.wait').html("<p style='color:red';>亲，用户名已存在</p>")
+        //             }
+        //         },
+        //         beforeSend() {
+        //             $('.wait').html("<img src='../../../static/images/common/loading_green.gif'>")
+        //         }
+        //     })
+        // }
+
+        login() {
+            window.location.href="http://localhost:8080/?#/login"
         }
     },
 }

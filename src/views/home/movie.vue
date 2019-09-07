@@ -69,63 +69,97 @@ export default {
         }
     },
     created() {
-        const tokens = localStorage.getItem('token');
+        // const tokens = localStorage.getItem('token');
         // if(!tokens){
         //     alert('亲，需要登录才能使用哦')
         //     this.$router.push('/login');
         // }
-        var param = new URLSearchParams();       
-        console.log(tokens)
-        param.append("dataToken",tokens)
+        // var param = new URLSearchParams();       
+        // console.log(tokens)
+        // param.append("dataToken",tokens)
         
-        this.axios({
-            method:'post',
-            data:param,
-            url:"http://localhost:8888/panduan"
-        }).then((ok)=>{
-            console.log(ok);
-            if(ok.data.linkid == 5) {
-                alert("亲，你来了");
-                this.axios({
-                    url:"/moveitem",
-                    method:"get"
-                }).then((ok)=>{
+        // this.axios({
+        //     method:'post',
+        //     data:param,
+        //     url:"http://localhost:8888/panduan"
+        // }).then((ok)=>{
+        //     console.log(ok);
+        //     if(ok.data.linkid == 5) {
+        //         alert("亲，你来了");
+        //         this.axios({
+        //             url:"/moveitem",
+        //             method:"get"
+        //         }).then((ok)=>{
                     
-                    this.data = ok.data
-                    // console.log(this.data)
-                    for(var i=0;i<this.data.length;i++) {
-                        if(i<6) {
-                            this.newarr.push(this.data[i]);
-                        }else if(i>=6 && i<14) {
-                            this.newarr2.push(this.data[i]);
-                        }else if(i>=16 && i<24) {
-                            this.newarr3.push(this.data[i]);
-                        }
+        //             this.data = ok.data
+        //             // console.log(this.data)
+        //             for(var i=0;i<this.data.length;i++) {
+        //                 if(i<6) {
+        //                     this.newarr.push(this.data[i]);
+        //                 }else if(i>=6 && i<14) {
+        //                     this.newarr2.push(this.data[i]);
+        //                 }else if(i>=16 && i<24) {
+        //                     this.newarr3.push(this.data[i]);
+        //                 }
+        //             }
+        //             // console.log(this.newarr);
+        //         }),
+
+        //         this.axios({
+        //             url:"/findmovie",
+        //             method:"get"
+        //         }).then((ok)=>{        
+        //             this.findMore = ok.data
+        //             // console.log(this.findMore)
+        //         }),
+
+        //         this.axios({
+        //             url:"/fenleilist",
+        //             method:"get"
+        //         }).then((ok)=>{        
+        //             this.fenLei = ok.data
+        //             // console.log(this.fenLei)
+        //         })
+        //     }else {
+        //     //     alert('亲，需要登录才能使用哦')
+        //     // this.$router.push('/login');
+        //     }
+        // })
+
+        this.axios({
+            url:"/moveitem",
+            method:"get"
+            }).then((ok)=>{
+                
+                this.data = ok.data
+                // console.log(this.data)
+                for(var i=0;i<this.data.length;i++) {
+                    if(i<6) {
+                        this.newarr.push(this.data[i]);
+                    }else if(i>=6 && i<14) {
+                        this.newarr2.push(this.data[i]);
+                    }else if(i>=16 && i<24) {
+                        this.newarr3.push(this.data[i]);
                     }
-                    // console.log(this.newarr);
-                }),
+                }
+                // console.log(this.newarr);
+            }),
 
-                this.axios({
-                    url:"/findmovie",
-                    method:"get"
-                }).then((ok)=>{        
-                    this.findMore = ok.data
-                    // console.log(this.findMore)
-                }),
+            this.axios({
+                url:"/findmovie",
+                method:"get"
+            }).then((ok)=>{        
+                this.findMore = ok.data
+                // console.log(this.findMore)
+            }),
 
-                this.axios({
-                    url:"/fenleilist",
-                    method:"get"
-                }).then((ok)=>{        
-                    this.fenLei = ok.data
-                    // console.log(this.fenLei)
-                })
-            }else {
-            //     alert('亲，需要登录才能使用哦')
-            // this.$router.push('/login');
-            }
-        })
-
+            this.axios({
+                url:"/fenleilist",
+                method:"get"
+            }).then((ok)=>{        
+                this.fenLei = ok.data
+                // console.log(this.fenLei)
+            })
         
     },
 }

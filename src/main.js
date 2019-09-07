@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
 
-
+// import 
 Vue.use(ElementUI)
 
 import axios from 'axios'
